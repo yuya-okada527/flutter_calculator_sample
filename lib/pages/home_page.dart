@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_calculator/widgets/calculator_button.dart';
 
 
 class Calculator extends StatefulWidget {
@@ -23,45 +24,45 @@ class _CalculatorState extends State<Calculator> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const <Widget>[
-                Text("AC"),
-                Text("±"),
-                Text("%"),
-                Text("÷")
+                CalculatorButton(value: "AC"),
+                CalculatorButton(value: "±"),
+                CalculatorButton(value: "%"),
+                CalculatorButton(value: "÷")
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const <Widget>[
-                Text("7"),
-                Text("8"),
-                Text("9"),
-                Text("×")
+                CalculatorButton(value: "7"),
+                CalculatorButton(value: "8"),
+                CalculatorButton(value: "9"),
+                CalculatorButton(value: "×")
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const <Widget>[
-                Text("4"),
-                Text("5"),
-                Text("6"),
-                Text("-")
+                CalculatorButton(value: "4"),
+                CalculatorButton(value: "5"),
+                CalculatorButton(value: "6"),
+                CalculatorButton(value: "-")
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const <Widget>[
-                Text("1"),
-                Text("2"),
-                Text("3"),
-                Text("+")
+                CalculatorButton(value: "1"),
+                CalculatorButton(value: "2"),
+                CalculatorButton(value: "3"),
+                CalculatorButton(value: "+")
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const <Widget>[
-                Text("0"),
-                Text("."),
-                Text("=")
+                CalculatorButton(value: "0"),
+                CalculatorButton(value: "."),
+                CalculatorButton(value: "=")
               ],
             ),
           ],
