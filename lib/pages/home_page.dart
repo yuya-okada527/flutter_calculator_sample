@@ -23,46 +23,46 @@ class _CalculatorState extends State<Calculator> {
           children: <Widget>[
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const <Widget>[
-                CalculatorButton(value: "AC"),
-                CalculatorButton(value: "±"),
-                CalculatorButton(value: "%"),
-                CalculatorButton(value: "÷")
+              children: <Widget>[
+                CalculatorButton(value: "AC", onClick: () {}),
+                CalculatorButton(value: "±", onClick: () {}),
+                CalculatorButton(value: "%", onClick: () {}),
+                CalculatorButton(value: "÷", onClick: () {})
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const <Widget>[
-                CalculatorButton(value: "7"),
-                CalculatorButton(value: "8"),
-                CalculatorButton(value: "9"),
-                CalculatorButton(value: "×")
+              children: <Widget>[
+                CalculatorButton(value: "7", onClick: () {}),
+                CalculatorButton(value: "8", onClick: () {}),
+                CalculatorButton(value: "9", onClick: () {}),
+                CalculatorButton(value: "×", onClick: () {})
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const <Widget>[
-                CalculatorButton(value: "4"),
-                CalculatorButton(value: "5"),
-                CalculatorButton(value: "6"),
-                CalculatorButton(value: "-")
+              children: <Widget>[
+                CalculatorButton(value: "4", onClick: () {}),
+                CalculatorButton(value: "5", onClick: () {}),
+                CalculatorButton(value: "6", onClick: () {}),
+                CalculatorButton(value: "-", onClick: () {})
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const <Widget>[
-                CalculatorButton(value: "1"),
-                CalculatorButton(value: "2"),
-                CalculatorButton(value: "3"),
-                CalculatorButton(value: "+")
+              children: <Widget>[
+                CalculatorButton(value: "1", onClick: () {}),
+                CalculatorButton(value: "2", onClick: () {}),
+                CalculatorButton(value: "3", onClick: () {}),
+                CalculatorButton(value: "+", onClick: () {})
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const <Widget>[
-                CalculatorButton(value: "0"),
-                CalculatorButton(value: "."),
-                CalculatorButton(value: "=")
+              children: <Widget>[
+                CalculatorButton(value: "0", onClick: () {}),
+                CalculatorButton(value: ".", onClick: () {}),
+                CalculatorButton(value: "=", onClick: () {})
               ],
             ),
           ],
