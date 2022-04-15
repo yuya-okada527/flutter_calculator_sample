@@ -11,6 +11,9 @@ class CalculatorButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       child: Text(value),
+      style: ElevatedButton.styleFrom(
+        shape: const CircleBorder(),
+      ),
       onPressed: () {
         onClick();
       },
