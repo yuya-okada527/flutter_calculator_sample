@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_calculator/pages/calculator_page.dart';
+import 'package:flutter_calculator/pages/tasks_page.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
 
   final Map<String, Function> _tools = {
     "Calculator": () => const Calculator(),
+    "Tasks": () => const TasksPage(),
   };
 
   @override
@@ -20,7 +22,11 @@ class HomePage extends StatelessWidget {
           itemBuilder: (context, index) {
             var key = _tools.keys.elementAt(index);
             return Container(
-              margin: const EdgeInsets.all(20),
+              margin: const EdgeInsets.only(
+                top: 12,
+                left: 20,
+                right: 20,
+              ),
               child: OutlinedButton(
                 child: Text(key),
                 style: OutlinedButton.styleFrom(

@@ -1,6 +1,6 @@
-# flutter_calculator
+# flutter_seven_tools
 
-flutter calculator sample app
+flutter seven tools app
 
 ## スクリーンショット
 
