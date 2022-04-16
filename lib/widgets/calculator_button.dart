@@ -19,15 +19,13 @@ class CalculatorButton extends StatelessWidget {
       child: Text(
         value,
         style: const TextStyle(
-          fontSize: 22,
+          fontSize: 24,
         ),
       ),
-      // ignore: todo
-      // TODO: refactor
       style: ElevatedButton.styleFrom(
         primary: color,
         shape: isWide ? const StadiumBorder() : const CircleBorder(),
-        fixedSize: isWide ? const Size(160, 60) : const Size(60, 60),
+        fixedSize: isWide ? const Size(170, 70) : const Size(70, 70),
       ),
       onPressed: () {
         onClick();
