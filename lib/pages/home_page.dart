@@ -11,6 +11,14 @@ class Calculator extends StatefulWidget {
 class _CalculatorState extends State<Calculator> {
   String _expression = "";
 
+  void _calculate() {
+    if (_expression.isEmpty) {
+      return;
+    }
+    // ignore: todo
+    // TODO: implements!
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +45,10 @@ class _CalculatorState extends State<Calculator> {
                 ),
                 CalculatorButton(
                   value: "±",
-                  onClick: () {},
+                  onClick: () {
+                    // ignore: todo
+                    // TODO: implements!
+                  },
                   color: Colors.black26,
                   isWide: false,
                 ),
