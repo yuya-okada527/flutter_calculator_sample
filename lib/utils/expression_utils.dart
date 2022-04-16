@@ -12,6 +12,7 @@ class ExpressionUtils {
     var result = expressionStr.replaceAll("×", "*");
     result = result.replaceAll("÷", "/");
     result = result.replaceAll("% ", "* 0.01");
+    // ignore: avoid_print
     print("expression: '$result'");
     return result;
   }

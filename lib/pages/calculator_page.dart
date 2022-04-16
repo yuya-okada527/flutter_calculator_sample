@@ -246,6 +246,7 @@ class _CalculatorState extends State<Calculator> {
                     try {
                       _calculate();
                     } catch (e) {
+                      // ignore: avoid_print
                       print(e);
                       await showDialog(
                         context: context,
