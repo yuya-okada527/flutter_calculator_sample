@@ -242,8 +242,32 @@ class _CalculatorState extends State<Calculator> {
                 ),
                 CalculatorButton(
                   value: "=",
-                  onClick: () {
-                    _calculate();
+                  onClick: () async {
+                    try {
+                      _calculate();
+                    } catch (e) {
+                      print(e);
+                      await showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: const Text("計算式を評価できません"),
+                            content: const Text("改めて計算式を入力してください。"),
+                            actions: <Widget>[
+                              ElevatedButton(
+                                onPressed: () {
+                                  return Navigator.of(context).pop();
+                                },
+                                child: const Text("確認"),
+                              )
+                            ],
+                          );
+                        },
+                      );
+                      setState(() {
+                        _expression = "";
+                      });
+                    }
                   },
                   color: Colors.orange,
                   isWide: false,
