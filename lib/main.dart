@@ -3,20 +3,20 @@ import 'package:flutter/material.dart';
 import 'pages/home_page.dart';
 
 void main() {
-  runApp(const App());
+  runApp(const SevenToolsApp());
 }
 
-class App extends StatelessWidget {
-  const App({Key? key}) : super(key: key);
+class SevenToolsApp extends StatelessWidget {
+  const SevenToolsApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Seven Tools App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Calculator(),
+      home: HomePage(),
     );
   }
 }
