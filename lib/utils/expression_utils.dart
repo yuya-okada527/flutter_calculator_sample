@@ -11,6 +11,8 @@ class ExpressionUtils {
   static String _convert(String expressionStr) {
     var result = expressionStr.replaceAll("×", "*");
     result = result.replaceAll("÷", "/");
+    result = result.replaceAll("% ", "* 0.01");
+    print("expression: '$result'");
     return result;
   }
 }
