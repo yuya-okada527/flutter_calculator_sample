@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_calculator/utils/expression_utils.dart';
 import 'package:flutter_calculator/widgets/calculator_button.dart';
 
 class Calculator extends StatefulWidget {
@@ -15,8 +16,9 @@ class _CalculatorState extends State<Calculator> {
     if (_expression.isEmpty) {
       return;
     }
-    // ignore: todo
-    // TODO: implements!
+    setState(() {
+      _expression = ExpressionUtils.eval(_expression);
+    });
   }
 
   @override
@@ -29,7 +31,12 @@ class _CalculatorState extends State<Calculator> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Text(_expression),
+            Text(
+              _expression,
+              style: const TextStyle(
+                fontSize: 32,
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
@@ -46,8 +53,9 @@ class _CalculatorState extends State<Calculator> {
                 CalculatorButton(
                   value: "±",
                   onClick: () {
-                    // ignore: todo
-                    // TODO: implements!
+                    setState(() {
+                      _expression += "-";
+                    });
                   },
                   color: Colors.black26,
                   isWide: false,
@@ -235,10 +243,7 @@ class _CalculatorState extends State<Calculator> {
                 CalculatorButton(
                   value: "=",
                   onClick: () {
-                    // ignore: todo
-                    // TODO: implements!
-                    // ignore: avoid_print
-                    print("calculate!!");
+                    _calculate();
                   },
                   color: Colors.orange,
                   isWide: false,
