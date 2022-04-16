@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_calculator/repositories/task_repository.dart';
 import 'package:flutter_calculator/widgets/task_list_item.dart';
 
 import 'task_add_page.dart';
@@ -11,14 +12,20 @@ class TasksPage extends StatefulWidget {
 }
 
 class _TasksPageState extends State<TasksPage> {
-  final List<String> _taskList = [];
+  List<String> _taskList = [];
 
   @override
   void initState() {
     super.initState();
-    // ignore: todo
-    // TODO: implements user preferences
+    TaskRepository taskRepository = TaskRepository();
+    Future(() async {
+      List<String> savedTasks = await taskRepository.fetchTaskList();
+      setState(() {
+        _taskList = savedTasks;
+      });
+    });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,10 +38,12 @@ class _TasksPageState extends State<TasksPage> {
               itemBuilder: (context, index) {
                 return TaskListItem(
                   title: _taskList[index],
-                  onDeleteConfirm: () {
+                  onDeleteConfirm: () async {
                     setState(() {
                       _taskList.removeAt(index);
                     });
+                    TaskRepository taskRepository = TaskRepository();
+                    await taskRepository.saveTaskList(_taskList);
                   },
                 );
               },
@@ -59,11 +68,11 @@ class _TasksPageState extends State<TasksPage> {
             }),
           );
           if (newTask != null) {
-            setState(
-              () {
-                _taskList.add(newTask);
-              },
-            );
+            setState(() {
+              _taskList.add(newTask);
+            });
+            TaskRepository taskRepository = TaskRepository();
+            await taskRepository.saveTaskList(_taskList);
           }
         },
       ),
