@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_calculator/widgets/timer/action_button.dart';
 
 class TimerPage extends StatefulWidget {
   const TimerPage({Key? key}) : super(key: key);
@@ -17,11 +18,23 @@ class _TimerPageState extends State<TimerPage> {
         title: const Text("Timer"),
       ),
       body: Center(
-        child: CupertinoTimerPicker(
-          onTimerDurationChanged: (Duration duration) {
-            _duration = duration;
-          },
-          initialTimerDuration: _duration,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            CupertinoTimerPicker(
+              onTimerDurationChanged: (Duration duration) {
+                _duration = duration;
+              },
+              initialTimerDuration: _duration,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                actionButton(label: "キャンセル"),
+                actionButton(label: "開始"),
+              ],
+            ),
+          ],
         ),
       ),
     );
