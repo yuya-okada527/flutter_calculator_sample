@@ -27,12 +27,16 @@ class _TimerPageState extends State<TimerPage> {
               },
               initialTimerDuration: _duration,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                actionButton(label: "キャンセル"),
-                actionButton(label: "開始"),
-              ],
+            const SizedBox(height: 16),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 32),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  actionButton(label: "キャンセル"),
+                  actionButton(label: "開始"),
+                ],
+              ),
             ),
           ],
         ),
