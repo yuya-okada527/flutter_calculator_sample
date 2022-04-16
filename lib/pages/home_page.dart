@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_calculator/pages/calculator_page.dart';
-import 'package:flutter_calculator/pages/tasks_page.dart';
+import 'calculator/calculator_page.dart';
+import 'tasks/tasks_page.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);

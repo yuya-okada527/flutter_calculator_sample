@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_calculator/repositories/task_repository.dart';
-import 'package:flutter_calculator/widgets/task_list_item.dart';
+import 'package:flutter_calculator/repositories/tasks/task_repository.dart';
+import 'package:flutter_calculator/widgets/tasks/task_list_item.dart';
 
 import 'task_add_page.dart';
 

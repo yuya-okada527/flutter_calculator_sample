@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_calculator/utils/expression_utils.dart';
-import 'package:flutter_calculator/widgets/calculator_button.dart';
+import 'package:flutter_calculator/widgets/calculator/calculator_button.dart';
 
 class Calculator extends StatefulWidget {
   const Calculator({Key? key}) : super(key: key);

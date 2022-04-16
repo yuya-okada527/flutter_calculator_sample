@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_calculator/widgets/delete_button.dart';
+import 'package:flutter_calculator/widgets/tasks/delete_button.dart';
 
 class TaskListItem extends StatelessWidget {
   final String title;
