@@ -33,8 +33,8 @@ class _TimerPageState extends State<TimerPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  actionButton(label: "キャンセル"),
-                  actionButton(label: "開始"),
+                  actionButton(label: "キャンセル", callback: () {}),
+                  actionButton(label: "開始", callback: () {}),
                 ],
               ),
             ),

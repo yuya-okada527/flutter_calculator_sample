@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
-Widget actionButton({required String label}) {
+Widget actionButton({required String label, required Function callback}) {
   return ElevatedButton(
-    onPressed: () {},
+    onPressed: () {
+      callback();
+    },
     child: Text(
       label,
       softWrap: false,
