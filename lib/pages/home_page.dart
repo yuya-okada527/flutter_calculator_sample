@@ -19,17 +19,27 @@ class HomePage extends StatelessWidget {
           itemCount: _tools.length,
           itemBuilder: (context, index) {
             var key = _tools.keys.elementAt(index);
-            return ElevatedButton(
-              child: Text(key),
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) {
-                    return _tools[key]!();
-                  })
-                );
-              },
+            return Container(
+              margin: const EdgeInsets.all(20),
+              child: OutlinedButton(
+                child: Text(key),
+                style: OutlinedButton.styleFrom(
+                  primary: Colors.black,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  side: const BorderSide(color: Colors.blue),
+                ),
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) {
+                      return _tools[key]!();
+                    }),
+                  );
+                },
+              ),
             );
-          }
+          },
         ),
       ),
     );
