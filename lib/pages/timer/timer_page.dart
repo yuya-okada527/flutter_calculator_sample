@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_calculator/pages/timer/count_down_page.dart';
 import 'package:flutter_calculator/widgets/timer/action_button.dart';
 
 class TimerPage extends StatefulWidget {
@@ -34,7 +35,18 @@ class _TimerPageState extends State<TimerPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   actionButton(label: "キャンセル", callback: () {}),
-                  actionButton(label: "開始", callback: () {}),
+                  actionButton(
+                    label: "開始",
+                    callback: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return CountDownPage(duration: _duration);
+                          },
+                        ),
+                      );
+                    },
+                  ),
                 ],
               ),
             ),
