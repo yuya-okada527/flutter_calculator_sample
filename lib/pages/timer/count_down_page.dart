@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_calculator/widgets/timer/count_down.dart';
 
 class CountDownPage extends StatefulWidget {
   final Duration duration;
@@ -43,7 +44,7 @@ class _CountDownPage extends State<CountDownPage> {
         title: const Text("Count Down"),
       ),
       body: Center(
-        child: Text("$_countDownSec"),
+        child: countDown(_countDownSec),
       ),
     );
   }
