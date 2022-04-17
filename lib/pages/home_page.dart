@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_calculator/pages/login/login_page.dart';
 import 'package:flutter_calculator/pages/timer/timer_page.dart';
 import 'calculator/calculator_page.dart';
 import 'tasks/tasks_page.dart';
@@ -10,6 +11,7 @@ class HomePage extends StatelessWidget {
     "Calculator": () => const Calculator(),
     "Tasks": () => const TasksPage(),
     "Timer": () => const TimerPage(),
+    "Login": () => const LoginPage(),
   };
 
   @override
