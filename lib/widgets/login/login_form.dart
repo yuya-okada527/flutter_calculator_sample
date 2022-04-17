@@ -28,13 +28,12 @@ class _LoginFormState extends State<LoginForm> {
               _password = value;
             });
           }),
-          ElevatedButton(
-            child: const Text("ログイン"),
-            onPressed: () {},
-          ),
-          ElevatedButton(
-            child: const Text("新規登録"),
-            onPressed: () {},
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              child: const Text("ログイン"),
+              onPressed: () {},
+            ),
           ),
         ],
       ),

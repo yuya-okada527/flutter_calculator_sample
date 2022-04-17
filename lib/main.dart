@@ -6,8 +6,10 @@ import 'pages/home_page.dart';
 
 void main() async {
   await dotenv.load();
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  // ignore: todo
+  // TODO: 初期化がうまくいかないので調査
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
   runApp(const SevenToolsApp());
 }
 
