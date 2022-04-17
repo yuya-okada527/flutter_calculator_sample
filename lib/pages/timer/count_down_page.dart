@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_calculator/widgets/timer/count_down.dart';
+import 'package:flutter_calculator/widgets/timer/count_down_indicator.dart';
 
 class CountDownPage extends StatefulWidget {
   final Duration duration;
@@ -13,12 +14,14 @@ class CountDownPage extends StatefulWidget {
 
 class _CountDownPage extends State<CountDownPage> {
   int _countDownSec = 0;
+  int _totalSec = 0;
   Timer? _timer;
 
   @override
   void initState() {
     super.initState();
     _countDownSec = widget.duration.inSeconds;
+    _totalSec = _countDownSec;
     _timer = Timer.periodic(
       const Duration(seconds: 1),
       (timer) {
@@ -44,7 +47,16 @@ class _CountDownPage extends State<CountDownPage> {
         title: const Text("Count Down"),
       ),
       body: Center(
-        child: countDown(_countDownSec),
+        child: Stack(
+          children: <Widget>[
+            Center(
+              child: countDown(_countDownSec),
+            ),
+            Center(
+              child: countDownIndicator(_totalSec),
+            ),
+          ],
+        ),
       ),
     );
   }
