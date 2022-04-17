@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_calculator/utils/env_utils.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+
+  String _email = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,7 +17,18 @@ class LoginPage extends StatelessWidget {
         title: const Text("Login"),
       ),
       body: Center(
-        child: Text("ENV_SAMPLE = " + EnvUtils.getEnv("ENV_SAMPLE")),
+        child: Column(
+          children: <Widget>[
+            TextFormField(
+              decoration: const InputDecoration(labelText: "Email"),
+              onChanged: (String value) {
+                setState(() {
+                  _email = value;
+                });
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
