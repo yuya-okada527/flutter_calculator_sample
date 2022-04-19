@@ -9,3 +9,5 @@ install:
 	flutter pub get
 testing:
 	flutter test
+setup:
+	cp scripts/pre-commit.sh .git/hooks/pre-commit
