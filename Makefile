@@ -4,5 +4,8 @@ open:
 	open -a Simulator
 format:
 	flutter format lib
+	flutter format test
 install:
 	flutter pub get
+testing:
+	flutter test
