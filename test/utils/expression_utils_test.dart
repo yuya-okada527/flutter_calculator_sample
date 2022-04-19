@@ -27,6 +27,10 @@ void main() {
       test('10 % = 0.1', () {
         expect(ExpressionUtils.eval("10 %"), "0.1");
       });
+
+      test('1 / 3 = 0.3333', () {
+        expect(ExpressionUtils.eval("1 / 3"), "0.3333333333");
+      });
     });
 
     group("複雑四則演算", () {
