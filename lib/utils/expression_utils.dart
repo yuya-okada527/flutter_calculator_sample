@@ -69,7 +69,8 @@ class ExpressionUtils {
       case "*":
         return Decimal.parse(right) * Decimal.parse(left);
       case "/":
-        return (Decimal.parse(right) / Decimal.parse(left)).toDecimal(scaleOnInfinitePrecision: 10);
+        return (Decimal.parse(right) / Decimal.parse(left))
+            .toDecimal(scaleOnInfinitePrecision: 10);
       default:
         throw Exception("$operator is not supported");
     }
