@@ -14,6 +14,8 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           flutter-version: "2.10.4"
+      - name: cp .env.sample .env
+        run: cp .env.sample .env
       - name: pub get
         run: make install
       - name: test
