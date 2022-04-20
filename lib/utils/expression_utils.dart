@@ -60,7 +60,7 @@ class ExpressionUtils {
     return evalMultiplyOrDevide(nextTokens.join(" "));
   }
 
-  static dynamic _calc(right, left, operator) {
+  static Decimal _calc(right, left, operator) {
     switch (operator) {
       case "+":
         return Decimal.parse(right) + Decimal.parse(left);
